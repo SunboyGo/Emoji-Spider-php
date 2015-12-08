@@ -6,11 +6,6 @@
      * @date    2015-12-08  11:30
      * @modify  2015-12-08  11:30
      *
-     //使用
-     $p = new EmojiSpider();
-     
-     $r = $p->getToken('11','22','33');
-     print_r($r);
      */
     
     define("imageDirectory" , 'EmojiImages/');
@@ -41,9 +36,7 @@
         public function getPictureUrl($content)
         {
             $regex = '/graphics\/emojis\/(.*).png/';
-            
             preg_match_all($regex,$content,$match);
-            
             return $match[0];
         }
         

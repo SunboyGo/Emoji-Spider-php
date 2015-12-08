@@ -1,10 +1,10 @@
 <?php
     require("EmojiSpider.php");
- 
+    
     $emojiSpider  = new EmojiSpider();
     
     $comtent = $emojiSpider->connectToInstagram("http://localhost:8888/emojiSpider/index.html");
-
+    
     $imgUrl = $emojiSpider->getPictureUrl($comtent);
     
     foreach ($imgUrl as $value)
@@ -13,6 +13,6 @@
         $emojiSpider->savePicture($imgDownUrl);
         
     }
-
     
-   
+    
+    
